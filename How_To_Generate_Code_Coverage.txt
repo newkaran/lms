@@ -1,0 +1,17 @@
+
+Steps To Run the Code coverage for Angular: 
+
+1. Run below command to run the instanbul Plugin for code coverage
+
+	npm install karma-coverage-istanbul-reporter --save-dev
+
+2. Run below command to install the dependency of instanbul plugin
+	
+	npm install --save-dev babel-plugin-istanbul
+
+3. Run below command to generate the code coverage
+
+	ng test --code-coverage
+
+4. Coverage folder will be generated inside the project. We Can Access the index.html file to see the report.
+

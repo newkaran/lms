@@ -1,0 +1,136 @@
+<header id="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto text-center">
+        <h2>Leave Application Form</h2>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="services" >
+
+    <div class="container">
+        <div class="row justify-content-center">
+         <form [formGroup]="applyLeaveForm" (ngSubmit)=submitLeave(applyLeaveForm) >
+            <div class="form-group row">
+                <!-- Material input -->
+                <div class="col-lg-5"> 
+                  <label for="startDate" class="col-form-label">Start Date</label>
+                </div>               
+                <div class="col-lg-5">
+                    <div class="md-form">
+                         <input type="date" formControlName="startDate">     
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="md-form mt-0">
+                  <div *ngIf="applyLeaveForm.get('startDate').invalid && applyLeaveForm.get('startDate').touched">
+                    <div *ngIf="applyLeaveForm.get('startDate').errors.required">
+                      Start Date is Required.
+                    </div>
+                  </div> 
+                  </div>                 
+                </div>
+            </div>
+            <div class="form-group row">
+              <!-- Material input -->
+              <div class="col-lg-5"> 
+                  <label for="endDate" class="col-form-label">End Date</label>
+                </div>               
+              <div class="col-lg-5">
+                  <div class="md-form">
+                      <input type="date" formControlName="endDate" (change)="calculateDays()">                        
+                  </div>
+              </div>
+              <div class="col-lg-2">
+                  <div class="md-form">
+                  <div *ngIf="applyLeaveForm.get('endDate').invalid && applyLeaveForm.get('endDate').touched">
+                    <div *ngIf="applyLeaveForm.get('endDate').errors.required">
+                      End Date is Required.
+                    </div>
+                  </div> 
+                  </div>                 
+                </div>
+          </div>
+
+          <div class="form-group row">
+            <!-- Material input -->
+            <div class="col-lg-5"> 
+                <label for="noOfDays" class="col-form-label">Number of Days</label>
+              </div> 
+           
+            <div class="col-lg-5">
+                <div class="md-form">
+                    <input type="text" [value]="numofDays" formControlName="numofDays" placeholder="">                        
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="md-form">
+                <div *ngIf="applyLeaveForm.get('numofDays').invalid && applyLeaveForm.get('numofDays').touched">
+                  <div *ngIf="applyLeaveForm.get('numofDays').errors.required">
+                    No of Days is Required.
+                  </div>
+                </div> 
+                </div>                 
+              </div>
+        </div>
+        <div class="form-group row">
+          <!-- Material input -->
+          <div class="col-lg-5"> 
+              <label for="leaveType" class="col-form-label">Leave Type</label>
+            </div> 
+          <div class="col-lg-5">
+              <div class="md-form">
+                  <select required id="leaveType"  name="leaveType" formControlName="leaveType">
+                      <option default value="Earned Leave">Earned Leave</option>
+                  </select>                    
+              </div>
+          </div>
+          <div class="col-lg-2">
+              <div class="md-form">
+              <div *ngIf="applyLeaveForm.get('leaveType').invalid && applyLeaveForm.get('leaveType').touched">
+                <div *ngIf="applyLeaveForm.get('leaveType').errors.required">
+                  Leave Type is Required.
+                </div>
+              </div> 
+              </div>                 
+            </div>
+      </div>
+      <div class="form-group row">
+        <!-- Material input -->
+        <div class="col-lg-5"> 
+            <label for="leaveReason" class="col-form-label">Leave Reason</label>
+          </div> 
+       
+        
+        <div class="col-lg-6">
+            <div class="md-form">
+              <textarea  formControlName="leaveReason"></textarea>                    
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="md-form">
+            <div *ngIf="applyLeaveForm.get('leaveReason').invalid && applyLeaveForm.get('leaveReason').touched">
+              <div *ngIf="applyLeaveForm.get('leaveReason').errors.required">
+               Leave Reason is Required.
+              </div>
+            </div> 
+            </div>                 
+          </div>
+    </div>
+            <div class="form-group row">
+                <!-- Material input -->
+                <div class="col-sm-6">
+                    <button class="btn btn-md btn-primary btn-block" id="applyLeaveID" type="submit">Apply</button>
+                </div>
+                <div class="col-sm-6">
+                    <div class="md-form mt-0">
+                        <button class="btn btn-md btn-primary btn-block" type="submit" [routerLink]="['/employees']">Cancel</button>
+                    </div>
+                </div>
+            </div>
+                  
+            </form>         
+        </div>
+        </div>
+        </section>

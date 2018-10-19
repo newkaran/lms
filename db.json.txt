@@ -1,0 +1,15 @@
+{
+  "employees": [
+    { "empID": 177, "empName": "Suresh", "empEmail": "Suresh@Hexaware.com","empMobile":"94033201232","dateJoined":"02/02/2018","departMent":"ADM","leaveBalance":"5", "designation":"SoftwareEngineer","empManagerID":"44" },
+    { "empID": 186, "empName": "Harish", "empEmail": "Harish@Hexaware.com","empMobile":"84303322232","dateJoined":"17/04/2018","departMent":"ADM","leaveBalance":3","designation":"SoftwareEngineer","empManagerID":"44" },
+    { "empID": 44, "empName": "Ramesh", "empEmail": "Ramesh@Hexaware.com","empMobile":"69239238229","dateJoined":"07/05/2017","departMent":"ADM","leaveBalance":13","designation":"Manager" ,"empManagerID":"20" },
+    { "empID": 34, "empName": "Sarvesh", "empEmail": "Sarvesh@Hexaware.com","empMobile":"772392382244,"dateJoined":"27/04/2015","departMent":"ADM","leaveBalance":13","designation":"Manager","empManagerID":"20" },
+    { "empID": 20, "empName": "Yuvaraj", "empEmail": "Yuvaraj@Hexaware.com","empMobile":"93321119229","dateJoined":"18/10/2010","departMent":"ADM","leaveBalance":20","designation":"CEO","empManagerID":"" },
+  ],
+  "leaves": [
+     { "empID": 177, "empName": "Suresh", leaveBalance":"5","leaveID":"2233","numOfDays":"1","startDate":"02/09/2018","endDate":"02/09/2018","leaveType":"Earned Leave","status":"Pending","Reason":"Sick","comments":""},
+     { "empID": 177, "empName": "Suresh", leaveBalance":"5","leaveID":"2234","numOfDays":"1","startDate":"05/09/2018","endDate":"05/09/2018","leaveType":"Earned Leave","status":"Pending","Reason":"Sick","comments":""},
+      { "empID": 44, "empName": "Ramesh", leaveBalance":"13","leaveID":"2234","numOfDays":"1","startDate":"06/09/2018","endDate":"06/09/2018","leaveType":"Earned Leave","status":"Pending","Reason":"Personal","comments":""},
+  ]
+  
+}

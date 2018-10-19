@@ -1,0 +1,211 @@
+<div class="form-group row ml-1">
+  <h3> <div class="spacer5"></div> Approve Deny Leave
+  </h3>
+</div>    
+    <!-- Grid row -->
+    <form [formGroup]="approveLeaveForm" (ngSubmit)=approveLeave(approveLeaveForm) >
+    <div class="form-group row ml-1">
+        <!-- Material input -->
+        <div class="col-sm-2 col-form-label-sm">
+            <div >
+              Employee ID </div>
+       </div>
+        <div class="col-sm-3">
+            <div>{{leaveDetails.empID}}</div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+              
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+              Start Date
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div >
+                {{leaveDetails.startDate}}
+            </div>
+        </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="form-group row ml-1">
+        <!-- Material input -->
+        <div class="col-sm-2 col-form-label-sm">
+            <div >
+              Employee Name  </div>
+       </div>
+        <div class="col-sm-3">
+            <div >
+              {{leaveDetails.empName}}
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+              
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+              End Date
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div >
+                {{leaveDetails.endDate}}
+            </div>
+        </div>
+    </div>
+    <!-- Grid row -->
+    <div class="form-group row ml-1">
+      <!-- Material input -->
+      <div class="col-sm-2 col-form-label-sm">
+          <div >
+            Leave Balance   </div>
+     </div>
+      <div class="col-sm-3">
+          <div >
+            {{leaveDetails.leaveBalance}}
+          </div>
+      </div>
+      <div class="col-sm-2">
+          <div >
+            
+          </div>
+      </div>
+      <div class="col-sm-2">
+          <div >
+            Number of Days 
+          </div>
+      </div>
+      <div class="col-sm-3">
+          <div >
+              {{leaveDetails.numOfDays}}
+          </div>
+      </div>
+  </div>
+
+  <div class="form-group row ml-1">
+    <!-- Material input -->
+    <div class="col-sm-2 col-form-label-sm">
+        <div >
+          </div>
+   </div>
+    <div class="col-sm-3">
+        <div >
+          
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div >
+          
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div >
+          Leave Type 
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div >
+            {{leaveDetails.leaveType}}
+        </div>
+    </div>
+</div>
+
+<div class="form-group row ml-1">
+  <!-- Material input -->
+  <div class="col-sm-2 col-form-label-sm">
+      <div >
+        Comments
+        </div>
+ </div>
+  <div class="col-sm-3">
+      <div >
+          <textarea  formControlName="leaveComments"></textarea>  
+      </div>
+  </div>
+  <div class="col-sm-2">
+      <div >
+        
+      </div>
+  </div>
+  <div class="col-sm-2">
+      <div >
+        Reason
+      </div>
+  </div>
+  <div class="col-sm-3">
+      <div >
+        {{leaveDetails.reason}}
+      </div>
+  </div>
+</div>
+      
+
+<div class="form-group row ml-1">
+  <!-- Material input -->
+  <div class="col-sm-2 col-form-label-sm">
+      <div >
+        </div>
+ </div>
+  <div class="col-sm-3">
+      <div >
+        
+      </div>
+  </div>
+  <div class="col-sm-2">
+      <div >
+        
+      </div>
+  </div>
+  <div class="col-sm-2">
+      <div >
+        
+      </div>
+  </div>
+  <div class="col-sm-3">
+      <div >
+        
+      </div>
+  </div>
+</div>
+
+<div class="form-group row ml-1">
+        <!-- Material input -->
+        <div class="col-sm-3 col-form-label-sm">
+            <div >
+              </div>
+       </div>
+        <div class="col-sm-2">
+            <div >
+                <button class="btn btn-md btn-primary btn-block" id="approveLeaveID" type="submit" [routerLink]="['/employees']" >Approve</button>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+                <button class="btn btn-md btn-primary btn-block" id="DenyID" [routerLink]="['/employees']" >Deny</button>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div >
+                <button class="btn btn-md btn-primary btn-block" id="cancelID" [routerLink]="['/employees']">Cancel</button>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div >
+              
+            </div>
+        </div>
+      </div>
+</form>
+
+
+  
+
+
+         
+<!-- Horizontal material form -->

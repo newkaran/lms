@@ -1,0 +1,49 @@
+
+  <header id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-auto text-center">
+          <h2>Employees List</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="row" >
+       
+         <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Employee ID</th>
+                  <th scope="col">Employee Full Name</th>
+                  <th scope="col">Email Address</th>
+                 <!-- <th scope="col">Mobile Number</th>
+                  <th scope="col">Date Joined</th>
+                  <th scope="col">Department</th>-->
+                  <th scope="col">Leave Balance</th>
+                  <th scope="col">Designation</th>    
+                  <th scope="col"></th>               
+                </tr>
+              </thead>
+              <tbody *ngFor="let e of employeeList">
+                <tr>
+                  <th scope="row">{{e.id}}</th>
+                  <td>{{e.empName}}</td>
+                  <td>{{e.empEmail}}</td>
+                 <!-- <td>{{e.empMobile}}</td>
+                  <td>{{e.dateJoined}}</td>
+                  <td>{{e.departMent}}</td> -->
+                  <td>{{e.leaveBalance}}</td>
+                  <td>{{e.designation}}</td>
+                  <td><button type="submit" class="btn btn-md btn-primary btn-block" [routerLink]="['/login', e.id,e.empManagerID]" id="Login" >Login</button> </td>
+                </tr>
+             </tbody>            
+            </table>
+      
+        </div>
+        </div>
+        </section>
+  
+       
+  

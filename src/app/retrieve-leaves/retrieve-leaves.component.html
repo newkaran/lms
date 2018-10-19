@@ -1,0 +1,36 @@
+<div class="form-group row ml-3">
+    <h4> My Applied Leaves
+    </h4>
+  </div>
+<div class="container">
+    
+    <div class="row ml-3">
+      <div class="col bg-info border">LeaveID</div>
+      <div class="col bg-info border">Number of Days</div>
+      <div class="col bg-info border">Start Date</div>
+      <div class="col bg-info border">End Date</div>
+      <div class="col bg-info border">Leave Type</div>
+      <div class="col bg-info border">Status</div>
+      <div class="col bg-info border">Reason</div>
+      <div class="col bg-info border">Applied On</div>
+      <div class="col bg-info border">Manager Comments</div>
+      <ng-container *ngFor="let ldetails of leaveDetails;">     
+        <div class="w-100"></div>    
+        <div class="col bg-secondary border">{{ldetails.id}}</div>
+        <div class="col bg-secondary border">{{ldetails.numOfDays}}</div>
+        <div class="col bg-secondary border">{{ldetails.startDate}}</div>
+        <div class="col bg-secondary border">{{ldetails.endDate}}</div>
+        <div class="col bg-secondary border">{{ldetails.leaveType}}</div>
+        <div class="col bg-secondary border">{{ldetails.status}}</div>
+        <div class="col bg-secondary border">{{ldetails.reason}}</div>
+        <div class="col bg-secondary border">{{ldetails.appliedOn}}</div>
+        <div class="col bg-secondary border">{{ldetails.managerComments}}</div>
+    </ng-container>
+    </div>
+
+    <div class="form-group row ml-3 justify-content-end">
+      <div class="md-form">
+        <button class="btn btn-md btn-primary btn-block" type="submit" [routerLink]="['/applyLeave',employeeID,managerID]">Apply Leave</button>
+      </div>
+    </div>
+  </div>

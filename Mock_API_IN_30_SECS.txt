@@ -1,0 +1,31 @@
+Steps to Create Mock API in 30 Seconds
+
+Prerequisites:
+
+1. Node and NPM to be installed.
+
+Steps:
+
+1. Run below command to install Json-server
+	npm install -g json-server
+
+2. Create a db.json file with some data , This is the actual Mock data which we can update for our requirements.
+
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "json" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "Hello" }
+}
+
+3. Start JSON Server
+
+         json-server --watch db.json (Add db.json file where ever you are running this command)
+
+
+	Now if you go to http://localhost:3000/posts/1, you'll get the rest service response.
+
+		{ "id": 1, "title": "json-server", "author": "json" }

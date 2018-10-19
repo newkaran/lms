@@ -1,0 +1,17 @@
+.table tr.active td {
+    background-color:#123456 !important;
+    color: white;
+  }
+
+header{
+    background-color: #F3F7FA;
+    padding: 10px;
+}
+
+footer{
+    background-color: #F3F7FA;
+    padding: 10px;
+    position:relative;
+    bottom:0;
+    width: 100%;
+}
